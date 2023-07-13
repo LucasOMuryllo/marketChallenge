@@ -100,7 +100,7 @@ function App() {
         <PageTitle data={'Seu carrinho'} />
         <div className='content'>
           <section>
-            <button onClick={handleAddItem}>
+            <button onClick={handleAddItem} className='add-btn'>
               Add to cart
             </button>
             <table>

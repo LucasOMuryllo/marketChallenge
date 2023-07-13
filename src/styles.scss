@@ -11,7 +11,7 @@ body {
   font-family: 'Lato', sans-serif;
 
   #root {
-    > header {
+    >header {
       background: #111;
       color: white;
       font-size: 24px;
@@ -20,7 +20,8 @@ body {
       display: flex;
       justify-content: center;
     }
-    > main {
+
+    >main {
       background: #fff;
       padding: 0 30px 30px;
 
@@ -29,12 +30,14 @@ body {
         padding: 50px 0;
         text-align: center;
       }
+
       .content {
         display: flex;
 
         section {
           flex: 1;
         }
+
         aside {
           min-width: 250px;
         }
@@ -48,6 +51,16 @@ button {
   font-family: 'Lato', sans-serif;
 }
 
+.add-btn {
+  width: 100px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 10px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -55,6 +68,7 @@ table {
   thead {
     tr {
       border-bottom: 3px solid #eee;
+
       th {
         text-align: left;
         padding-bottom: 10px;
@@ -63,6 +77,7 @@ table {
       }
     }
   }
+
   tbody {
     tr {
       border-bottom: 3px solid #eee;
@@ -88,15 +103,18 @@ table {
 
   .info {
     margin-left: 20px;
+
     .name {
       font-size: 20px;
       margin-bottom: 10px;
     }
+
     .category {
       color: #666;
     }
   }
 }
+
 .qty {
   background: #eee;
   display: inline-flex;
@@ -126,6 +144,7 @@ table {
     }
   }
 }
+
 .remove {
   background: #eee;
   border: 0;
@@ -144,6 +163,7 @@ table {
 
 aside {
   margin-left: 30px;
+
   .box {
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -156,11 +176,12 @@ aside {
       font-size: 18px;
       border-bottom: 1px solid #ccc;
     }
+
     .info {
       padding: 20px;
       font-size: 16px;
 
-      > div {
+      >div {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
@@ -170,6 +191,7 @@ aside {
           margin: 0;
         }
       }
+
       button {
         color: #28a745;
         background: transparent;
@@ -178,10 +200,10 @@ aside {
         align-items: center;
         font-size: 16px;
 
-        i {
-        }
+        i {}
       }
     }
+
     footer {
       padding: 15px 20px;
       background: #ddd;
@@ -191,7 +213,7 @@ aside {
     }
   }
 
-  > button {
+  >button {
     border: 0;
     padding: 15px 0;
     color: white;
