@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'https://crudcrud.com/api/10400b94d74545d996708e3271eff95a/',
+  baseURL: 'https://crudcrud.com/api/8b0621fead7441af86e573b8a666b27d/',
   timeout: 10000,
 });
 
@@ -25,15 +25,15 @@ export const addItemToCart = async (productObject) => {
   }
 };
 
-export const removeItemFromCart = async (itemId) => {
-  try {
-    const response = await api.delete(`cart/${itemId}`);
-    return response.data;
-  } catch (error) {
-    console.log('Error removing item from cart:', error);
-    throw error;
-  }
-};
+// export const removeItemFromCart = async (_id) => {
+//   try {
+//     const response = await api.delete(`cart/${_id}`);
+//     return response.data;
+//   } catch (error) {
+//     console.log('Error removing item from cart:', error);
+//     throw error;
+//   }
+// };
 
 export const updateItemInCart = async (itemId, updatedData) => {
   try {

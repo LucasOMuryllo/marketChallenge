@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
-const Summary = ({total}) => {
+const Summary = ({ total }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <>
       <div className='box'>
@@ -15,7 +22,7 @@ const Summary = ({total}) => {
             <span>Gratuito</span>
           </div>
           <div>
-            <button>
+            <button onClick={handleOpenModal}>
               Adicionar cupom de desconto
               <i className='bx bx-right-arrow-alt'></i>
             </button>
@@ -27,6 +34,8 @@ const Summary = ({total}) => {
         </footer>
       </div>
       <button>Finalizar Compra</button>
+
+      {isModalOpen && <Modal />}
     </>
   );
 };
