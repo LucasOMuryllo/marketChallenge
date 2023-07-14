@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableRow = ({data, handleRemoveItem, handleUpdateItem}) => {
+const TableRow = ({ data, handleRemoveItem, handleUpdateItem }) => {
   return (
     <tr>
       <td>
@@ -17,7 +17,9 @@ const TableRow = ({data, handleRemoveItem, handleUpdateItem}) => {
         <div className='qty'>
           <button onClick={() => {
             handleUpdateItem(data, 'decrease')
-          }}>
+          }}
+            disabled={data.quantity <= 1}
+          >
             <i className='bx bx-minus'></i>
           </button>
           <span>{data.quantity}</span>
@@ -31,7 +33,7 @@ const TableRow = ({data, handleRemoveItem, handleUpdateItem}) => {
       <td>R$ {data.price * data.quantity}</td>
       <td>
         <button className='remove' onClick={() => {
-          handleRemoveItem(data)
+          handleRemoveItem(data._id)
         }}>
           <i className='bx bx-x'></i>
         </button>

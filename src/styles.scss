@@ -229,3 +229,56 @@ aside {
     }
   }
 }
+
+// MODAL
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fundo escuro semitransparente */
+}
+
+.modal-content {
+  width: 100vh;
+  /* Tamanho padrão do modal */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+
+  .input-container {
+    width: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 28px;
+    border-radius: 8px;
+    border: solid 1px;
+  }
+
+  .button-container {
+    .cancel-button {
+      background-color: grey;
+      color: #fff;
+      border-radius: 8px;
+      border: none;
+      width: 100px;
+      padding: 8px;
+    }
+
+    .confirm-button {
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 8px;
+      border: none;
+      width: 100px;
+      padding: 8px;
+      margin-left: 10px;
+    }
+  }
+}

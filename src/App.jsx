@@ -42,9 +42,9 @@ function App() {
     }
   };
 
-  const handleRemoveItem = async (itemId) => {
+  const handleRemoveItem = async (_id) => {
     try {
-      await api.delete(`/cart/${itemId}`);
+      await api.delete(`/cart/${_id}`);
       fetchData();
     } catch (error) {
       console.error('Error removing item from cart:', error);
